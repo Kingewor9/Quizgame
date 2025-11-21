@@ -1,0 +1,26 @@
+{
+  "title": "Golden Boot Legends",
+  "durationSeconds": 90,
+  "startDate": "2025-11-20T00:00:00Z",
+  "endDate": "2025-11-27T00:00:00Z",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "Which player scored the most goals in the 2018 World Cup?",
+      "options": ["Harry Kane", "Kylian Mbappé", "Antoine Griezmann", "Luka Modrić"],
+      "answerIndex": 0
+    },
+    {
+      "id": "q2",
+      "text": "Who won the Golden Boot in the Premier League 2020/21?",
+      "options": ["Harry Kane", "Mohamed Salah", "Jamie Vardy", "Bruno Fernandes"],
+      "answerIndex": 0
+    },
+    {
+      "id": "q3",
+      "text": "Which club has the most Champions League titles?",
+      "options": ["Barcelona", "AC Milan", "Real Madrid", "Bayern Munich"],
+      "answerIndex": 2
+    }
+  ]
+}

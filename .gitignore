@@ -1,0 +1,22 @@
+# Node / frontend
+node_modules/
+dist/
+build/
+.vite/
+.env
+.env.local
+npm-debug.log
+yarn-error.log
+
+# Python / backend
+backend/.venv/
+backend/.env
+backend/__pycache__/
+backend/*.pyc
+backend/venv/
+backend/.pytest_cache/
+
+# Editor / OS
+.vscode/
+.DS_Store
+Thumbs.db
