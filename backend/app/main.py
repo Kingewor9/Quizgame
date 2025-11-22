@@ -18,14 +18,22 @@ app = FastAPI(title="Footy IQ API")
 # CORS - allow frontend (production + dev)
 FRONTEND_ORIGIN = os.getenv('FRONTEND_ORIGIN', 'http://localhost:5173')
 FRONTEND_ORIGIN_PROD = os.getenv('FRONTEND_ORIGIN_PROD', '')
+# When set to '1' this will allow all origins (use only for quick testing)
+ALLOW_ALL_ORIGINS = os.getenv('ALLOW_ALL_ORIGINS', '0') == '1'
 
-origins = [FRONTEND_ORIGIN]
-if FRONTEND_ORIGIN_PROD:
-    origins.append(FRONTEND_ORIGIN_PROD)
+if ALLOW_ALL_ORIGINS:
+    allow_origins = ["*"]
+else:
+    origins = []
+    if FRONTEND_ORIGIN:
+        origins.append(FRONTEND_ORIGIN)
+    if FRONTEND_ORIGIN_PROD:
+        origins.append(FRONTEND_ORIGIN_PROD)
+    allow_origins = origins
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=allow_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
