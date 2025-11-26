@@ -174,13 +174,13 @@ export default function QuizPage() {
 
   return (
     <div className="page-container">
-      <header className="header flex items-center justify-between">
-        <div className="brand flex items-center gap-2"><Trophy size={20} />Footy IQ</div>
-        <div className="nav-quick flex items-center gap-2 cursor-pointer" onClick={() => navigate('/leaderboard')}>Leaderboard <ArrowRight size={16} /></div>
+      <header className="header">
+        <div className="brand"><Trophy size={20} />Footy IQ</div>
+        <div className="nav-quick" onClick={() => navigate('/leaderboard')}>Leaderboard <ArrowRight size={16} /></div>
       </header>
 
       <main className="main">
-        <div className="panel w-full max-w-6xl">
+        <div className="panel">
           {loading ? (
             <div>Loading quiz...</div>
           ) : !quiz ? (
@@ -192,7 +192,7 @@ export default function QuizPage() {
               <div className="quiz-stats-grid">
                 <div className="stat-item"><Users size={16} /><div><span>Questions</span><strong>{quiz.questions.length}</strong></div></div>
                 <div className="stat-item"><Clock size={16} /><div><span>Time</span><strong>{quiz.durationSeconds}s</strong></div></div>
-                <div className="stat-item"><span>Total points</span><strong>{quiz.questions.length * 10}</strong></div>
+                <div className="stat-item"><div><span>Total points</span><strong>{quiz.questions.length * 10}</strong></div></div>
                 <div className="stat-item"><Calendar size={16} /><div><span>Expires in</span><strong>{expireCountdown}</strong></div></div>
               </div>
             </>

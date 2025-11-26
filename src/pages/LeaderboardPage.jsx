@@ -35,18 +35,18 @@ export default function LeaderboardPage() {
 
   return (
     <div className="page-container">
-      <header className="header flex items-center justify-between">
-        <div className="brand flex items-center gap-2"><Trophy size={20} />Footy IQ</div>
-          <div className="nav-quick"><Link to="/">Back to quiz</Link></div>
+      <header className="header">
+        <div className="brand"><Trophy size={20} />Footy IQ</div>
+        <div className="nav-quick"><Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>Back to quiz</Link></div>
       </header>
 
       <main className="main">
-        <div className="panel w-full max-w-2xl">
-          <h2 className="flex items-center gap-2"><Users size={18} />Global Leaderboard</h2>
-          <p className="text-sm text-gray-400">Top players by total score</p>
+        <div className="panel">
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: '32px', margin: '0 0 8px', display: 'flex', alignItems: 'center', gap: '10px' }}><Users size={18} />Global Leaderboard</h2>
+          <p style={{ fontSize: '14px', color: 'var(--text-secondary)', margin: '0' }}>Top players by total score</p>
         </div>
 
-        <div className="leaderboard w-full max-w-2xl">
+        <div className="leaderboard">
           {lb.length === 0 && <div className="empty">No entries yet</div>}
           <div className="leader-table">
             <div className="header-row">
